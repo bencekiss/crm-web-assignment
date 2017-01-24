@@ -5,7 +5,7 @@
 #
 # If your implementation of the Contact class is 'right', then you should see that all tests pass!
 
-require_relative './crm.rb'
+# require_relative './crm.rb'
 require 'pry'
 
 class Contact
@@ -262,7 +262,7 @@ class Contact
         return contact
       end
     end
-    
+
     return
   end
 
