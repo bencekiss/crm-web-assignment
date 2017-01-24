@@ -4,5 +4,6 @@
 require 'sinatra'
 
 get '/' do
-  'Main Menu'
+  @crm_app_name = "Bitmaker's CRM"
+  erb(:index)
 end
