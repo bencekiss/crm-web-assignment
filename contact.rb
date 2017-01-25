@@ -12,7 +12,7 @@ class Contact
   attr_accessor :first_name, :last_name, :email, :note
   attr_reader :id
   @@all_contacts = []
-  @@next_id = 1000
+  @@next_id = 0
 
 
   def self.all
