@@ -182,7 +182,8 @@ class Contact
 
   end
   def delete
-    @@all_contacts.delete(self)
+    # @@all_contacts.delete(self)
+    @@all_contacts.delete_if { |contact| contact.id == self.id }
   end
 
 

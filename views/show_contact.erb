@@ -4,8 +4,11 @@
 <p><%= @contact.note %></p>
 
 
-<form action="contacts/<%= @contact.id %>" method="post">
+<form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete this!">
 
+</form>
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input type="submit" value="Edit" href="/contacts/<%= @contact.id %>/edit">
 </form>

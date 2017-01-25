@@ -6,10 +6,10 @@ require 'sinatra'
 
 
 # Fake data
-Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
-Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
+# Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
+# Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
+# Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
+# Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
 
 
 get '/' do
@@ -73,6 +73,15 @@ delete '/contacts/:id' do
   if @contact
     @contact.delete
     redirect to('/contacts')
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+post '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    redirect to('/contacts/:id/edit')
   else
     raise Sinatra::NotFound
   end
