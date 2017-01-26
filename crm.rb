@@ -6,10 +6,10 @@ require 'sinatra'
 
 
 # Fake data
-Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
-Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
+# Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
+# Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
+# Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
+# Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
 
 
 get '/' do
@@ -100,4 +100,9 @@ end
 
 get '/about' do
   erb :about
+end
+
+
+after do
+  ActiveRecord::Base.connection.close
 end
