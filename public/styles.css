@@ -1,3 +1,130 @@
+
+html {
+    font-size: 16px;
+    font-family: helvetica new, Arial, sans-serif;
+    margin: auto;
+}
+img{
+  max-width: 100%;
+}
+
+.headlines {
+    background-color: black;
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 0.6em 0;
+
+}
+
+
+.nav {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    font-weight: bold;
+}
+
+.headlist {
+    background-color: lightgray;
+    color: white;
+    padding: 0.5em;
+    margin: 0.1em 0;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.1em 0;
+}
+.footertext{
+  margin:0;
+  padding:0.5em;
+}
+
 h1 {
-  background-color: yellow;
+    margin: 0;
+}
+
+
+.container{
+  margin: auto;
+  width: 550px;
+
+}
+.container ul{
+  list-style: none;
+  margin:0;
+  padding: 0.1em 0;
+}
+.container li{
+  background-color: #00e1d1;
+  padding: 4%;
+  margin: 1em 0;
+}
+.all{
+  background-color: #ff7f72;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 3%;
+  margin-top: 1em;
+}
+.all span{
+  font-weight: bold;
+  border-bottom: 2px solid #00e1d1;
+}
+
+
+/*show contact site*/
+.contactname{
+    background-color: #ff7f72;
+    color: white;
+    font-weight: normal;
+    padding: 3%;
+    margin-top: 1em;
+}
+.contact{
+  background-color: #00e1d1;
+  padding: 4%;
+  margin: 1em 0;
+}
+.contactbutton{
+  background: #818181;
+  border: none;
+  color: white;
+}
+.buttons form {
+  width: 70px;
+  margin: 0;
+  display: inline-block;
+}
+
+/*edit page data*/
+.edit{
+  text-align: center;
+}
+.editform{
+  display: inline-block;
+  background-color: #00e1d1;
+  color: white;
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 0.3em 0;
+}
+.editform label{
+  line-height: 1.5em;
+  width:40%;
+
+}
+.editbutton{
+  background: #818181;
+  border: none;
+  color: white;
+  padding: 1em;
+
+}
+.edittable{
+  margin: 1.5em auto;
 }

@@ -6,10 +6,10 @@ require 'sinatra'
 
 
 # Fake data
-# Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-# Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-# Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
-# Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
+Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
+Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
+Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
+Contact.create('Bence', 'Kiss', 'bence@kiss.hu', 'Regular person')
 
 
 get '/' do
@@ -85,4 +85,19 @@ post '/contacts/:id' do
   else
     raise Sinatra::NotFound
   end
+end
+
+get '/contacts/:id/delete' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    @contact.delete
+    flash[:success] = "#{ @contact.first_name } #{ @contact.last_name } at ID# #{ @contact.id } deleted!"
+    erb :delete
+  else
+    raise Sinatra::NotFound
+  end
+end
+
+get '/about' do
+  erb :about
 end

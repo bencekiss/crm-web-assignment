@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>New Contact</title>
-  </head>
-  <body>
-    <h1>Create new Contact</h1>
+<div class="edit">
+  <h1 class="contactname">Create new Contact</h1>
 
-    <form action="/contacts" method="post">
-      <input type="text" name="first_name" placeholder="First Name">
-      <input type="text" name="last_name" placeholder="Last Name">
-      <input type="text" name="email" placeholder="example@bc.com">
-      <input type="text" name="note" placeholder="Note">
-      <input type="submit" value="New Contact">
-    </form>
-  </body>
-</html>
+  <form class="editform" action="/contacts" method="post">
+    <table class="edittable">
+      <tbody>
+        <tr>
+          <td><label for="first_name">First Name: </label></td>
+          <td><input type="text" name="first_name" placeholder="First Name"></td>
+        </tr>
+        <tr>
+          <td><label for="last_name">Last Name: </label></td>
+          <td><input type="text" name="last_name" placeholder="Last Name"></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email address: </label></td>
+          <td><input type="text" name="email" placeholder="example@bc.com"></td>
+        </tr>
+        <tr>
+          <td><label for="note">Note: </label></td>
+          <td><input type="text" name="note" placeholder="Note"></td>
+        </tr>
+      </tbody>
+    </table>
+    <input class="editbutton" type="submit" value="New Contact">
+  </form>
+</div>

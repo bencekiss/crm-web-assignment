@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+  </head>
+  <body>
+  <header>
+    <div class="header">
+      <h1 class="headlines">Bitmaker CRM</h1>
+      <nav>
+        <ul class="nav">
+          <li class="headlist"><a class="navlist" href="/">Home</a></li>
+          <li class="headlist"><a class="navlist" href="/contacts">View contacts</a></li>
+          <li class="headlist"><a class="navlist" href="/contacts/new">Add Contact</a></li>
+          <li class="headlist"><a class="navlist" href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+
+    <%= yield %>
+  </main>
+  <footer>
+    <p class="footertext">©Bitmaker 2017</p>
+  </footer>
+  </body>
+</html>
