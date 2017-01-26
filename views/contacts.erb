@@ -5,7 +5,7 @@
   <% Contact.all.each do |contact| %>
     <li class="contact"><strong><%= contact.first_name %> <%= contact.last_name %> (<%=contact.email %>)</strong>
       <br>
-      <a href="/contacts/<%= contact.id %>">View contact</a> | <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="/contacts/<%= contact.id %>" method="post">Delete</a>
+      <a href="/contacts/<%= contact.id %>">View contact</a> | <a href="/contacts/<%= contact.id %>/edit">Edit</a> | <a href="/contacts/<%= contact.id %>/delete">Delete</a>
     </li>
   <% end %>
 </ul>

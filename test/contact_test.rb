@@ -4,7 +4,13 @@ require_relative '../contact'
 class TestContact < Minitest::Test
 
   def setup
-    @contact = Contact.create('Grace', 'Hopper', 'grace@hopper.com', 'computer scientist')
+    contact = Contact.create(
+    :first_name:  params[:first_name],
+    :last_name:   params[:last_name],
+    :email:       params[:email],
+    :note:        params[:note]
+    )
+    redirect to('/contacts')
   end
 
   def teardown
